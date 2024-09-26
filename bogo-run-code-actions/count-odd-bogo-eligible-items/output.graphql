@@ -1,0 +1,6 @@
+"Output object"
+type Output {
+  "Number of BOGO Eligible items found"
+  bogoQty: Int!
+  holdBogo: Boolean!
+}

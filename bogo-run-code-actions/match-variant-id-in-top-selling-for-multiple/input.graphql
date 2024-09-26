@@ -1,0 +1,15 @@
+query {
+  order {
+    lineItems {
+      title
+      quantity
+      variant {
+        id
+        price
+        product {
+          tags
+        }
+      }
+    }
+  }
+}  
