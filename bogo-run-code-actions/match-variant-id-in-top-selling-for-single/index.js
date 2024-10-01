@@ -42,10 +42,19 @@ export default function main({order}) {
     {variantId : 'gid://shopify/ProductVariant/40932099489838', flowVariantId: 'gid://shopify/ProductVariant/41119911706670'},
     {variantId : 'gid://shopify/ProductVariant/40932099424302', flowVariantId: 'gid://shopify/ProductVariant/41119911542830'},
     {variantId : 'gid://shopify/ProductVariant/40896615645230', flowVariantId: 'gid://shopify/ProductVariant/41054342676526'},
-    {variantId : 'gid://shopify/ProductVariant/41117349052462', flowVariantId: 'gid://shopify/ProductVariant/41054352637998'}
+    {variantId : 'gid://shopify/ProductVariant/41117349052462', flowVariantId: 'gid://shopify/ProductVariant/41054352637998'},
+    {variantId : 'gid://shopify/ProductVariant/41063482982446', flowVariantId: 'gid://shopify/ProductVariant/41132016336942'},
+    {variantId : 'gid://shopify/ProductVariant/40562783649838', flowVariantId: 'gid://shopify/ProductVariant/40877858324526'},
+    {variantId : 'gid://shopify/ProductVariant/40542005002286', flowVariantId: 'gid://shopify/ProductVariant/40877868187694'},
+    {variantId : 'gid://shopify/ProductVariant/41063438745646', flowVariantId: 'gid://shopify/ProductVariant/41132016861230'},
+    {variantId : 'gid://shopify/ProductVariant/41063482785838', flowVariantId: 'gid://shopify/ProductVariant/41132017385518'},
+    {variantId : 'gid://shopify/ProductVariant/40433235787822', flowVariantId: 'gid://shopify/ProductVariant/40914625396782'},
+    {variantId : 'gid://shopify/ProductVariant/40386502033454', flowVariantId: 'gid://shopify/ProductVariant/40865489190958'},
+    {variantId : 'gid://shopify/ProductVariant/40436741570606', flowVariantId: 'gid://shopify/ProductVariant/40914631458862'},
+    {variantId : 'gid://shopify/ProductVariant/40260861952046', flowVariantId: 'gid://shopify/ProductVariant/40584337260590'}
   ];
   
-  let matchedFlowVariantId;
+  let matchedFlowVariantId = 123;
   let matchedBogo = false;
   
   order.lineItems.forEach(lineItem => {
@@ -57,8 +66,12 @@ export default function main({order}) {
     });
   });
 
-  return {
-    matchedFlowVariantId: matchedFlowVariantId,
-    matchedBogo: matchedBogo
+  if (matchedFlowVariantId === 123) {
+    matchedFlowVariantId = '123'
   }
+  return {
+  matchedFlowVariantId: matchedFlowVariantId,
+  matchedBogo: matchedBogo
+  }
+  
 }
