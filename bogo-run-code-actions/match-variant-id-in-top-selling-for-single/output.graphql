@@ -1,5 +1,5 @@
 "Output object"
 type Output {
-  matchedFlowVariantId: Int!
+  matchedFlowVariantId: String!
   matchedBogo: Boolean!
 }
